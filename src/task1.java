@@ -11,7 +11,7 @@ public class task1 {
         // getting input
         Scanner sc = new Scanner(System.in);
         System.out.println("Please, write the length of your array: ");
-        int n = sc.nextInt(); // @ n length of array
+        int n = sc.nextInt(); // @ n length of the array
         System.out.println("Please, input the numbers of your array:");
         int[] arr = new int[n]; // @ arr = array
         for(int i = 0; i<n; i++){
