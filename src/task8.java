@@ -1,6 +1,8 @@
-import java.util.Scanner;
-
 public class task8 {
+    /*
+       findDigit - finding the string is digit or not
+       @s = our string to check
+    */
     public static String findDigit(String s, int i) {
         if(i < 0){
             return "YES"; // base case
@@ -9,16 +11,5 @@ public class task8 {
             return findDigit(s, i - 1); // returning "Yes" if the first condition passed
         }
         return "NO"; // else returning "NO"
-    }
-
-    public static void main(String[] args) {
-        // getting input
-        Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine(); // @ s = string that we want to check
-        String ans = findDigit(s, s.length() - 1); // getting our function
-        System.out.println(ans);
-
-        sc.close();
-
     }
 }
