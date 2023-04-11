@@ -5,17 +5,19 @@ Here you can find explanations of all functions that I used to solve these probl
 
 **Description:** Returning the minimum value of an array
 
-**Explanation:** We create a varibale ``min`` and with the loop ``for`` we compare all elements in array. We always save the minimum value and at the end of the loop we will return it.
+**Explanation:** We use recursion in this function to find the minimum element in this array. Base condtion  ``if(n==1)``, we return first element of an array. Otherwise, by function Math.min we return the minimum value.
 
 **Solution:** 
 
 ```
-public static int findMin(int n, int[] arr) {
-        int min = 10000000;   
-        for(int i = 0; i<n; i++) {        
-            if(min > arr[i]) min = arr[i];            
-        }       
-        return min;
+public static int findMin(int[] arr, int n) {
+        if (n == 1) { 
+            return arr[0]; 
+        }
+        else{
+            return Math.min(arr[n-1], findMin(arr, n-1)); 
+        }
+    }
 ```
 **Task 2** 
 
